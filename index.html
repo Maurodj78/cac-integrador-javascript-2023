@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Codo a Codo - Trabajo Integrador Frontend - 2023 - Mauro Alonzi - Comision 23054</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="./script/script.js"></script>
+</head>
+
+<body>
+  <header id="menu">
+    <div class="d-flex navbar navbar-dark navbar-expand-lg bg-rgb sticky-top container-fluid">
+      <div class="col-md-4 d-flex text-align-center justify-content-center mx-auto">
+        <a href="#" class="navbar-brand">
+          <img class="img-fluid" src="./img/codoacodo.png" alt="logo de codo a codo" width="125" height="66">
+          <span class="navbar-brand mx-2 fs-4">Conf Bs As</span>
+        </a>
+      </div>
+      <button class="navbar-toggler m-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#enlaces"
+        aria-controls="enlaces" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="collapse navbar-collapse" id="enlaces">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-center text-center">
+          <li class="nav-item mr-auto">
+            <a class="nav-link" onclick="navigateToSection(event)" data-target="conferencia">La conferencia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="navigateToSection(event)" data-target="oradores">Los oradores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="navigateToSection(event)" data-target="locacion">El lugar y la fecha</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="navigateToSection(event)" data-target="incripcionOrador"
+              id="incripcionOradorLink">Conviertete en orador</a>
+          </li>
+          <li class="nav-item ml-auto">
+            <a class="nav-link text-success" onclick="navigateToSection(event)" data-target="comprarTickets"
+              id="comprarTicketsLink">Comprar tickets</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container-fluid no-padding card text-white" style="overflow: hidden;" id="conferencia">
+    <div>
+      <img src="./img/ba1.jpg" class="card-img imagenFondo img-fluid mx-auto" alt="Edificio Correo"
+        style="object-fit: cover;object-position: 50%;">
+    </div>
+    <div
+      class="card-text-container card-img-overlay d-flex flex-column align-items-end col-sm-12 col-md-8 col-lg-5 text-end">
+      <div class="row justify-content-end g-0">
+        <div class="col-11 col-md-6 col-lg-6 my-3 me-3 me-md-5">
+          <h1 class="card-title text-right font-weight-bold text-sm text-md text-lg" style="font-size: 2.5rem;">Conf Bs
+            As</h1>
+          <p class="card-text text-right text-sm text-md text-lg" style="font-size: 1.5rem; margin-bottom: 0.25em;">Bs
+            As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y
+            experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del nivel que
+            tenemos para ti. ¡Te esperamos!</p>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-outline-light btn-lg text-sm text-md text-lg"
+              id="quieroSerOradorBtn">Quiero ser orador</button>
+            <button type="button" class="btn btn-success btn-lg text-sm text-md text-lg">Comprar tickets</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4 mb-4" id="oradores">
+    <div class="text-black col-12">
+      <h4 class="text-center"><small>CONOCE A LOS</small></h4>
+      <h1 class="text-center">ORADORES</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="./img/steve.jpg" class="img-fluid mx-auto" alt="Steve Jobs" width="450">
+        <div class="border border border-light">
+          <span class="badge text-bg-warning">JavaScript</span>
+          <span class="badge text-bg-success">React</span>
+          <h2 class="title">Steve Jobs</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias recusandae, corrupti fuga iure
+            tempora iste natus quibusdam, voluptatibus eligendi, maxime aut facilis deserunt! Quas porro
+            similique ad illo vitae fugit.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="./img/bill.jpg" class="img-fluid mx-auto" alt="Bill Gates">
+        <div class="border border border-light">
+          <span class="badge text-bg-warning">JavaScript</span>
+          <span class="badge text-bg-success">React</span>
+          <h2 class="title">Bill Gates</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos libero necessitatibus saepe commodi
+            adipisci voluptates ex consectetur architecto quam ullam beatae, unde corporis pariatur odit
+            harum impedit nesciunt ea provident?</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="./img/ada.jpeg" class="img-fluid mx-auto" alt="Ada Lovelace">
+        <div class="border border border-light">
+          <span class="badge text-bg-dark">Negocios</span>
+          <span class="badge text-bg-danger">Startup</span>
+          <h2 class="title">Ada Lovelace</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas qui laborum quibusdam sequi cumque
+            quis similique tenetur quisquam ut aperiam accusantium, suscipit corporis asperiores.
+            Voluptatibus dignissimos deserunt maxime recusandae tenetur.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid destino-nav row clearfix m-0 p-0 mb-5" id="locacion">
+    <img src="./img/honolulu.jpg" alt="Playa" class="img-fluid p-0 col-12 col-lg-6">
+    <div class="bg-rgb text-white p-3 col-12 col-lg-6">
+      <h2>Bs As - Octubre</h2>
+      <p>Buenos Aires es la provincia y la localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu
+        es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al
+        área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una
+        ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600 km<sup>2</sup> de superficie).</p>
+      <a class="btn btn-outline-light">Conocé más</a>
+    </div>
+  </div>
+
+  <div class="container-fluid pt-4 col-md-9 col-lg-6 pb-3" id="incripcionOrador">
+    <div>
+      <h4 class="text-center"><small>CONVIÉRTETE EN UN</small></h4>
+      <h1 class="text-center">ORADOR</h1>
+      <p class="text-center">Anótate como orador para dar una <u>charla ignite</u>. Cuéntanos de qué quieres
+        hablar!</p>
+      <form action="#" method="post">
+        <div class="mb-3">
+          <div class="row gx-4 mb-3">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <input type="text" class="form-control form-control-sm" id="form-name" name="form-name"
+                placeholder="Nombre" required />
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control form-control-sm" id="form-surname" name="form-surname"
+                placeholder="Apellido" required />
+            </div>
+          </div>
+          <textarea class="form-control" id="comentario" name="comentario" placeholder="Sobre qué quieres hablar?"
+            rows="5" required></textarea>
+
+          <p id="recuerda" class="justify-content-lg-start"><small>Recuerda incluir un título para tu charla</small>
+          </p>
+        </div>
+        <button type="submit" class="btn btn-enviar text-white btn-block w-100">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!--div class="container-fluid mt-5 pt-3 pt-md-5" id="comprarTickets">
+    <div class="row g-0 justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+        <div class="row g-0 justify-content-center">
+          <div class="row g-2 gx-md-3 justify-content-between align-items-betweeen">
+            <div class="col-12 col-md-4">
+              <div class="border border-primary p-3 d-flex flex-column align-items-center">
+                <h3><strong>Estudiante</strong></h1>
+                  <p>Tienen un descuento</p>
+                  <p><strong>80%</strong></p>
+                  <p><small>* presentar documentación</small></p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 ">
+              <div class="p-3 d-flex flex-column align-items-center border border-info">
+                <h3><strong>Trainee</strong></h3>
+                <p>Tienen un descuento</p>
+                <p><strong>50%</strong></p>
+                <p><small>* presentar documentación</small></p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="p-3 d-flex flex-column align-items-center border border-warning">
+                <h3><strong>Junior</strong></h3>
+                <p>Tienen un descuento</p>
+                <p><strong>15%</strong></p>
+                <p><small>* presentar documentación</small></p>
+              </div>
+            </div>
+          </div>
+          <p class="text-center"><small>VENTA</small></p>
+          <h2 class="text-center">VALOR DE TICKET $200</h2>
+        </div>
+
+        <div class="container-fluid row justify-content-center g-0 gx-2 mb-5">
+          <form>
+            <div class="row g-3 mb-3 justify-content-center">
+              <div class="col-12 col-md-6">
+                <input class="form-control" type="text" name="form-tickets-name" id="form-tickets-name"
+                  placeholder="Nombre">
+              </div>
+
+              <div class="col-12 col-md-6">
+                <input class="col-12 col-md-6 form-control" type="text" name="form-tickets-surname"
+                  id="form-tickets-surname" placeholder="Apellido">
+              </div>
+              <div id="advertenciaNombre" class="text-danger d-none">
+                * El nombre es requerido
+              </div>
+              <div id="advertenciaApellido" class="text-danger d-none">
+                * El apellido es requerido
+              </div>
+            </div>
+            <div class="row g-3 mb-2">
+              <div class="col-12">
+                <input type="email" class="col-12 form-control" name="form-tickets-correo" id="form-tickets-correo"
+                  placeholder="Correo">
+              </div>
+              <div id="advertenciaCorreo" class="text-danger d-none">
+                * El correo electronico ingresado no es válido
+              </div>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-md-6">
+                <label for="form-tickets-cantidad">Cantidad</label>
+                <input type="number" class="form-control form-control-sm col-12 col-md-6" id="form-tickets-cantidad"
+                  name="form-tickets-cantidad" placeholder="cantidad" required />
+                <div id="advertenciaCantidad" class="text-danger d-none">* La cantidad de entradas debe ser mayor a 0
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="form-tickets-categoria">Categoria</label>
+                <select id="form-tickets-categoria" class="form-select form-select-sm col-12 col-md-6"
+                  name="form-tickets-categoria">
+                  <option value="Estudiante" selected>Estudiante</option>
+                  <option value="Trainee">Trainee</option>
+                  <option value="Junior">Junior</option>
+                </select>
+              </div>
+            </div>
+            <div--
+              class="row justify-content-between bg-info-subtle border border-info-subtle text-primary-dark border border-info rounded g-0 p-3 mb-3">
+              <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span>Total a Pagar: $</span>
+                  <span id="form-tickets-totalPagar" class="output-field text-end"></span>
+                </div>
+              </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <button id="btn-limpiar" type="reset" class="btn btn-enviar text-white btn-block w-100">Borrar</button>
+          </div>
+          <div class="col-12 col-md-6">
+            <button id="btn-calcular" type="button" onclick="calcularCosto()"
+              class="btn btn-enviar text-white btn-block w-100">Resumen</button>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  </div-->
+
+  <div class="container-fluid mt-1 pt-3 pt-md-5" id="comprarTickets">
+    <div class="row g-0 justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+        <div class="row g-0 justify-content-center">
+          <div class="row g-2 gx-md-3 justify-content-between align-items-betweeen">
+            <div class="col-12 col-md-4">
+              <div class="border border-primary p-3 d-flex flex-column align-items-center">
+                <h3><strong>Estudiante</strong></h3>
+                <p>Tienen un descuento</p>
+                <p><strong>80%</strong></p>
+                <p><small>* presentar documentación</small></p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 ">
+              <div class="p-3 d-flex flex-column align-items-center border border-info">
+                <h3><strong>Trainee</strong></h3>
+                <p>Tienen un descuento</p>
+                <p><strong>50%</strong></p>
+                <p><small>* presentar documentación</small></p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="p-3 d-flex flex-column align-items-center border border-warning">
+                <h3><strong>Junior</strong></h3>
+                <p>Tienen un descuento</p>
+                <p><strong>15%</strong></p>
+                <p><small>* presentar documentación</small></p>
+              </div>
+            </div>
+          </div>
+          <p class="text-center"><small>VENTA</small></p>
+          <h2 class="text-center">VALOR DE TICKET $200</h2>
+        </div>
+        
+        <div class="container-fluid row justify-content-center g-0 gx-2 mb-5">
+          <form id="form-tickets">
+            <div class="row g-3 mb-3 justify-content-center">
+              <div class="col-12 col-md-6">
+                <input class="form-control" type="text" name="form-tickets-name" id="form-tickets-name" placeholder="Nombre">
+              </div>
+              <div class="col-12 col-md-6">
+                <input class="col-12 col-md-6 form-control" type="text" name="form-tickets-surname" id="form-tickets-surname" placeholder="Apellido">
+              </div>
+              <div id="advertenciaNombre" class="text-danger d-none">* El nombre es requerido</div>
+              <div id="advertenciaApellido" class="text-danger d-none">* El apellido es requerido</div>
+            </div>
+            <div class="row g-3 mb-2">
+              <div class="col-12">
+                <input type="email" class="col-12 form-control" name="form-tickets-correo" id="form-tickets-correo" placeholder="Correo">
+              </div>
+              <div id="advertenciaCorreo" class="text-danger d-none">* El correo electrónico ingresado no es válido</div>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-md-6">
+                <label for="form-tickets-cantidad">Cantidad</label>
+                <input type="number" class="form-control form-control-sm col-12 col-md-6" id="form-tickets-cantidad" name="form-tickets-cantidad" placeholder="cantidad" required />
+                <div id="advertenciaCantidad" class="text-danger d-none">* La cantidad de entradas debe ser mayor a 0</div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="form-tickets-categoria">Categoria</label>
+                <select id="form-tickets-categoria" class="form-select form-select-sm col-12 col-md-6" name="form-tickets-categoria">
+                  <option value="Estudiante" selected>Estudiante</option>
+                  <option value="Trainee">Trainee</option>
+                  <option value="Junior">Junior</option>
+                </select>
+              </div>
+            </div>
+            <div class="row justify-content-between bg-info-subtle border border-info-subtle text-primary-dark border border-info rounded g-0 p-3 mb-3">
+              <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span>Total a Pagar: $</span>
+                  <span id="form-tickets-totalPagar" class="output-field text-end"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <button id="btn-limpiar" type="reset" class="btn btn-enviar text-white btn-block w-100">Borrar</button>
+              </div>
+              <div class="col-12 col-md-6">
+                <button id="btn-calcular" type="button" onclick="calcularCosto()" class="btn btn-enviar text-white btn-block w-100">Resumen</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <footer class="container-fluid bg-primary h-100 text-white py-4">
+    <div class="container">
+      <div class="d-block d-md-flex justify-content-around col-md-12 text-center">
+        <div class="text-center">
+          <a class="nav-link text-white" href="#"> <!--</a> style="white-space: pre-wrap;">-->
+            <div class="row">Preguntas</div>
+            <div class="row">frecuentes</div>
+          </a>
+        </div>
+        <div class="text-center">
+          <a class="nav-link text-white" href="#">Contáctanos</a>
+        </div>
+        <div class="text-center">
+          <a class="nav-link text-white" href="#">Prensa</a>
+        </div>
+        <div class="text-center">
+          <a class="nav-link text-white" href="#">Conferencias</a>
+        </div>
+        <div class="text-center">
+          <a class="nav-link text-white" href="#"> <!--</a> style="white-space: pre-wrap;">-->
+            <div class="row">Términos y</div>
+            <div class="row">condiciones</div>
+          </a>
+        </div>
+        <div class="text-center">
+          <a class="nav-link text-white" href="#">Privacidad</a>
+        </div>
+        <div class="text-center">
+          <a class="nav-link text-white" href="#">Estudiantes</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
